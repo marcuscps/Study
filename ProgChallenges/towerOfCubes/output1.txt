@@ -1,0 +1,16 @@
+Case #1
+2
+2 top
+3 front
+
+Case #2
+8
+1 bottom
+2 back
+3 right
+4 left
+7 bottom
+8 front
+9 bottom
+10 top
+
