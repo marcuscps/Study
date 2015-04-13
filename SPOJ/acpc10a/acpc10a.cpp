@@ -7,8 +7,7 @@ int main() {
 //	ios_base::sync_with_stdio(false);
 //	cin.tie(NULL);
 	
-	int a, b, c;
-	int val;
+	int a, b, c, val;
 	while (1) {
 		scanf("%d %d %d", &a, &b, &c);
 		if (a == 0 && b == 0 && c == 0) {
@@ -22,9 +21,7 @@ int main() {
 		}
 
 		val = (c / b);
-		if ((b / a) == val) {
-			printf("GP %d\n", (c * val));
-		}
+		printf("GP %d\n", (c * val));
 	}
 
 	return 0;

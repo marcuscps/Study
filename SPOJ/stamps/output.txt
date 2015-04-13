@@ -1,0 +1,12 @@
+Scenario #1:
+3
+
+Scenario #2:
+2
+
+Scenario #3:
+impossible
+
+Scenario #4:
+impossible
+
