@@ -1,0 +1,32 @@
+MyObj created: obj1
+Got "obj1"  -  List: ratio = 1/5: HEAD -> obj1
+Got "obj1"  -  List: ratio = 1/5: HEAD -> obj1
+MyObj created: obj2
+Got "obj2"  -  List: ratio = 2/5: HEAD -> obj2 -> obj1
+Got "obj2"  -  List: ratio = 2/5: HEAD -> obj2 -> obj1
+Got "obj1"  -  List: ratio = 2/5: HEAD -> obj1 -> obj2
+Got "obj2"  -  List: ratio = 2/5: HEAD -> obj2 -> obj1
+MyObj created: obj3
+Got "obj3"  -  List: ratio = 3/5: HEAD -> obj3 -> obj2 -> obj1
+Got "obj3"  -  List: ratio = 3/5: HEAD -> obj3 -> obj2 -> obj1
+MyObj created: obj4
+Got "obj4"  -  List: ratio = 4/5: HEAD -> obj4 -> obj3 -> obj2 -> obj1
+Got "obj4"  -  List: ratio = 4/5: HEAD -> obj4 -> obj3 -> obj2 -> obj1
+MyObj created: obj5
+Got "obj5"  -  List: ratio = 5/5: HEAD -> obj5 -> obj4 -> obj3 -> obj2 -> obj1
+Got "obj5"  -  List: ratio = 5/5: HEAD -> obj5 -> obj4 -> obj3 -> obj2 -> obj1
+MyObj created: obj6
+MyObj destroyed: obj1
+Got "obj6"  -  List: ratio = 5/5: HEAD -> obj6 -> obj5 -> obj4 -> obj3 -> obj2
+Got "obj6"  -  List: ratio = 5/5: HEAD -> obj6 -> obj5 -> obj4 -> obj3 -> obj2
+MyObj created: obj7
+MyObj destroyed: obj2
+Got "obj7"  -  List: ratio = 5/5: HEAD -> obj7 -> obj6 -> obj5 -> obj4 -> obj3
+Got "obj7"  -  List: ratio = 5/5: HEAD -> obj7 -> obj6 -> obj5 -> obj4 -> obj3
+Removed "obj5"  -  List: ratio = 4/5: HEAD -> obj7 -> obj6 -> obj4 -> obj3
+MyObj destroyed: obj5
+Can NOT remove! INVALID OBJECT  -  List: ratio = 4/5: HEAD -> obj7 -> obj6 -> obj4 -> obj3
+MyObj destroyed: obj7
+MyObj destroyed: obj6
+MyObj destroyed: obj4
+MyObj destroyed: obj3

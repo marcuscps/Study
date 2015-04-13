@@ -1,0 +1,20 @@
+c 5
+g obj1
+g obj1
+g obj2
+g obj2
+g obj1
+g obj2
+g obj3
+g obj3
+g obj4
+g obj4
+g obj5
+g obj5
+g obj6
+g obj6
+g obj7
+g obj7
+r obj5
+r INVALID_OBJ
+q
