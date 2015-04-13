@@ -1,0 +1,74 @@
+SS:   1 2 3 4 5 6 7 8 9 10 
+BS:   1 2 3 4 5 6 7 8 9 10 
+IS:   1 2 3 4 5 6 7 8 9 10 
+MS:   1 2 3 4 5 6 7 8 9 10 
+QS:   1 2 3 4 5 6 7 8 9 10 
+QSR:  1 2 3 4 5 6 7 8 9 10 
+HS:   1 2 3 4 5 6 7 8 9 10 
+BSI:  10 9 8 7 6 5 4 3 2 1 
+ISI:  10 9 8 7 6 5 4 3 2 1 
+MSI:  10 9 8 7 6 5 4 3 2 1 
+QSI:  10 9 8 7 6 5 4 3 2 1 
+QSRI: 10 9 8 7 6 5 4 3 2 1 
+HSI:  10 9 8 7 6 5 4 3 2 1 
+SS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+BS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+IS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+MS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+QS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+QSR:  1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+HS:   1.1 2.2 3.3 4.4 5.5 6.6 7.7 8.8 9.9 100 
+BSI:  100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1 
+ISI:  100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1 
+MSI:  100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1 
+QSI:  100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1 
+QSRI: 100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1 
+HSI:  100 9.9 8.8 7.7 6.6 5.5 4.4 3.3 2.2 1.1
+Increasing object priority queue: 1 2 4 3 5 
+Removed element: 1
+Removed element: 2
+Removed element: 3
+Removed element: 4
+Removed element: 5
+Increasing object priority queue: 1 2 4 5 3 
+Removed element: 1
+Removed element: 2
+Removed element: 3
+Removed element: 4
+Removed element: 5
+Decreasing object priority queue: 5 3 4 1 2 
+Removed element: 5
+Removed element: 4
+Removed element: 3
+Removed element: 2
+Removed element: 1
+Decreasing object priority queue: 5 4 3 2 1 
+Removed element: 5
+Removed element: 4
+Removed element: 3
+Removed element: 2
+Removed element: 1
+Increasing pointer priority queue: 1 2 4 3 5 
+Removed element: 1
+Removed element: 2
+Removed element: 3
+Removed element: 4
+Removed element: 5
+Increasing pointer priority queue: 1 2 4 5 3 
+Removed element: 1
+Removed element: 2
+Removed element: 3
+Removed element: 4
+Removed element: 5
+Decreasing pointer priority queue: 5 3 4 1 2 
+Removed element: 5
+Removed element: 4
+Removed element: 3
+Removed element: 2
+Removed element: 1
+Decreasing pointer priority queue: 5 4 3 2 1 
+Removed element: 5
+Removed element: 4
+Removed element: 3
+Removed element: 2
+Removed element: 1
