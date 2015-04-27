@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstdio>
 
-//#define DEBUG_ON
+#ifndef ONLINE_JUDGE
+	#define DEBUG_ON
+#endif
 #ifdef DEBUG_ON
 	#define DEBUG_ST(x)		x
 	#define DEBUG(...)		printf("## " __VA_ARGS__)
