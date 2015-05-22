@@ -1,65 +1,54 @@
 #include <iostream>
 #include <cstdio>
-
-#ifndef ONLINE_JUDGE
-	#define DEBUG_ON
-#endif
-#ifdef DEBUG_ON
-	#define DEBUG_ST(x)		x
-	#define DEBUG(...)		printf("## " __VA_ARGS__)
-	#define ODEBUG(...)		std::cout << "## " << __VA_ARGS__
-	#define MDEBUG(...)		printf(__VA_ARGS__)
-	#define OMDEBUG(...)	std::cout << __VA_ARGS__
-#else
-	#define DEBUG_ST(x)
-	#define DEBUG(...)
-	#define ODEBUG(...)
-	#define MDEBUG(...)
-	#define OMDEBUG(...)
-#endif
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
 	const size_t maxSize = 1001;
 
 	int k;
+	size_t ii, kk;
 	string a, b;
-	int eq[maxSize][maxSize];
-	int res[maxSize][maxSize];
+	int m[maxSize][maxSize];
+	int t, kmax, suffix;
+	size_t as, bs;
 
-	for (size_t ii = 0; ii < maxSize; ++ii) eq[0][ii] = 0;
-	for (size_t ii = 0; ii < maxSize; ++ii) res[0][ii] = 0;
-	for (size_t kk = 0; kk < maxSize; ++kk) res[kk][0] = eq[kk][0] = 0;
+	for (ii = 0; ii < maxSize; ++ii) m[0][ii] = 0;
+	for (ii = 0; ii < maxSize; ++ii) m[ii][0] = 0;
 
-	while (true) {
+	while (1) {
 		cin >> k;
 		if (k == 0) break;
 
 		cin >> a >> b;
 
-		size_t as = a.size();
-		size_t bs = b.size();
+		as = a.size();
+		bs = b.size();
 
-		for (size_t kk = 1; kk <= bs; ++kk) {
-			for (size_t ii = 1; ii <= as; ++ii) {
+		for (kk = 1; kk <= bs; ++kk) {
+			for (ii = 1; ii <= as; ++ii) {
 				if (a[ii - 1] == b[kk - 1]) {
-					eq[kk][ii] = eq[kk - 1][ii - 1] + 1;
+					m[kk][ii] = m[kk - 1][ii - 1] + 1;
 				} else {
-					eq[kk][ii] = 0;
-				}
-
-				res[kk][ii] = std::max(res[kk][ii - 1], res[kk - 1][ii]);
-				for (int size = k; size <= eq[kk][ii]; ++size) {
-					res[kk][ii] = std::max(res[kk][ii], res[kk - size][ii - size] + size);
+					m[kk][ii] = 0;
 				}
 			}
 		}
 
-		cout << res[bs][as] << endl;
+		for (kk = 1; kk <= bs; ++kk) {
+			for (ii = 1; ii <= as; ++ii) {
+				t = max(m[kk][ii - 1], m[kk - 1][ii]);
+				kmax = m[kk][ii];
+				for (suffix = k; suffix <= kmax; ++suffix) {
+					t = max(t, m[kk - suffix][ii - suffix] + suffix);
+				}
+				m[kk][ii] = t;
+			}
+		}
+
+		cout << m[bs][as] << endl;
 	}
 
 	return 0;
