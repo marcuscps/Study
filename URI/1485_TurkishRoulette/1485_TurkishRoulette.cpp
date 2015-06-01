@@ -10,6 +10,7 @@ int	profit[125][250];
 
 #define Position(pos)	(((pos) >= s) ? ((pos) - s) : (pos))
 
+#if 0  // Easy to understand
 inline int place(int b0) {
 	int maxProfit[126][250];
 
@@ -42,6 +43,32 @@ inline int place(int b0) {
 
 	return maxProfit[0][b0];
 }
+
+#else // Optimized
+inline int place(int b0) {
+	int maxProfit[250] = { 0 };
+
+	int first = ((b - 1) << 1);
+	int last  = (s - 2);
+	int n = last - first;
+	int v;
+
+	for (int bb = b - 1; bb > 0; --bb) {
+		int best = numeric_limits<int>::min();
+		for (int ii = last, kk = n; ii >= first; --ii, --kk) {
+			v = maxProfit[kk] + profit[bb][Position(b0 + ii)];
+			if (v > best) {
+				best = v;
+			}
+			maxProfit[kk] = best;
+		}
+		first -= 2;
+		last -= 2;
+	}
+
+	return maxProfit[0] += profit[0][b0];
+}
+#endif
 
 int main() {
     ios_base::sync_with_stdio(false);
