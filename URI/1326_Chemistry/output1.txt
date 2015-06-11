@@ -1,0 +1,4 @@
+Water requires 1 containers
+P requires 2 containers
+abcd requires 1 containers
+GOTIT requires 3 containers
