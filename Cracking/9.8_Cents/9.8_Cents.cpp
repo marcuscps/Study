@@ -22,8 +22,8 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-	const int len = 60;
-	int map[len + 1] = { 0 };
+	const int len = 100;
+	unsigned int map[len + 1] = { 0 };
 	map[0] = 1;
 
 	int ii = 1;
@@ -32,7 +32,7 @@ int main() {
 	for (; ii <  25; ++ii) map[ii] = map[ii - 1] + map[ii - 5] + map[ii - 10];
 	for (; ii < 101; ++ii) map[ii] = map[ii - 1] + map[ii - 5] + map[ii - 10] + map[ii - 25];
 
-	ostream_iterator<int> printer(cout, " ");
+	ostream_iterator<unsigned int> printer(cout, " ");
 
 	cout << "Results: "; copy(map, map + len, printer); cout << endl;
 
